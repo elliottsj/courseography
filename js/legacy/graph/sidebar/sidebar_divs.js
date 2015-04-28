@@ -2,7 +2,7 @@
 
 import $ from 'jquery';
 
-import { enableReset } from './sidebar_events';
+import { enableReset, getGraphsInDatabase } from './sidebar_events';
 
 var toggled = false;
 
@@ -63,7 +63,7 @@ export function fillFCECount() {
     'use strict';
 
     $('#fcecount').show();
-    $('#fcecount').html('FCE Count: ' + FCEs);
+    $('#fcecount').html('FCE Count: ' + global.FCEs);
 }
 
 
@@ -93,4 +93,4 @@ function toggleSidebar(location) {
 
         enableReset();
     }
-};
+}
